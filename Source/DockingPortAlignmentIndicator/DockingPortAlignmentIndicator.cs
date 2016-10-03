@@ -129,8 +129,8 @@ namespace NavyFish
         private static bool forceStockAppLauncher = false;
 
         public static bool RPMPageActive = false;
-        
-        static IButton toolbarButton;
+
+        //static IButton toolbarButton;
 
         private static ApplicationLauncherButton appLauncherButton;
 
@@ -234,7 +234,7 @@ namespace NavyFish
 
             LoadConfigFile();
 
-            blizzyToolbarAvailable = ToolbarManager.ToolbarAvailable;
+            //blizzyToolbarAvailable = ToolbarManager.ToolbarAvailable;
 
             if (forceStockAppLauncher || !blizzyToolbarAvailable)
             {
@@ -258,16 +258,16 @@ namespace NavyFish
             }
             else
             {
-                toolbarButton = ToolbarManager.Instance.add("DockingAlignment", "dockalign");
-                toolbarButton.TexturePath = "NavyFish/Plugins/ToolbarIcons/DPAI";
-                toolbarButton.ToolTip = "Show/Hide Docking Port Alignment Indicator";
-                toolbarButton.Visibility = new GameScenesVisibility(GameScenes.FLIGHT);
-                toolbarButton.Visible = true;
-                toolbarButton.Enabled = true;
-                toolbarButton.OnClick += (e) =>
-                {
-                    gaugeVisiblityToggledOn = !gaugeVisiblityToggledOn;
-                };
+                //toolbarButton = ToolbarManager.Instance.add("DockingAlignment", "dockalign");
+                //toolbarButton.TexturePath = "NavyFish/Plugins/ToolbarIcons/DPAI";
+                //toolbarButton.ToolTip = "Show/Hide Docking Port Alignment Indicator";
+                //toolbarButton.Visibility = new GameScenesVisibility(GameScenes.FLIGHT);
+                //toolbarButton.Visible = true;
+                //toolbarButton.Enabled = true;
+                //toolbarButton.OnClick += (e) =>
+                //{
+                //    gaugeVisiblityToggledOn = !gaugeVisiblityToggledOn;
+                //};
             }
 
             if (!hasInitializedStyles) initStyles();
@@ -1608,7 +1608,7 @@ namespace NavyFish
 
         private static void OnDestroy()
         {
-            if (toolbarButton != null) toolbarButton.Destroy();
+            //if (toolbarButton != null) toolbarButton.Destroy();
         }
         #endregion
 
